@@ -1,0 +1,20 @@
+header,
+.container {
+    text-align: center;
+}
+
+#button-rock,
+#button-paper,
+#button-scissors {
+    border: 0;
+    background-color: transparent;
+    font-size: 0;
+    padding: 30px;
+}
+
+#button-rock i,
+#button-paper i,
+#button-scissors i {
+    font-size: 60px;
+    color: #ffcd94;
+}

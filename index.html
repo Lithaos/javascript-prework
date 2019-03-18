@@ -1,20 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<title>Kamień, papier, nożyce</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+	 crossorigin="anonymous">
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
+	<header>
+		<h1>Papier, kamień, nożyce!</h1>
+		<p>Jeśli chcesz zagrać w gre, wystaczy wybrać co chcesz pokazać, a wynik pojawi się pod spodem!</p>
+	</header>
 	<div class="container">
 		<div id="buttons">
-			<button id="button-rock">Kamień</button>
-			<button id="button-paper">Papier</button>
-			<button id="button-scissors">Nożyce</button>
+			<button id="button-rock"><i class="fas fa-hand-rock"></i>Kamień</button>
+			<button id="button-paper"><i class="fas fa-hand-paper"></i>Papier</button>
+			<button id="button-scissors"><i class="fas fa-hand-scissors"></i>Nożyce</button>
 		</div>
 		<div id="messages"></div>
+		<div id="result">
+			<h3>
+		</div>
 	</div>
 	<script src="js/functions.js"></script>
 	<script src="js/script.js"></script>
 </body>
+
 </html>

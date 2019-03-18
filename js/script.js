@@ -1,7 +1,7 @@
-var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
+var argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber, resultPlayer = 0,
+    resultComputer = 0;
 
 function getMoveName(argMoveId) {
-    printMessage('wywołano funkcję getMoveName z argumentem: ' + argMoveId);
     if (argMoveId == 1) {
         return 'kamień';
     } else if (argMoveId == 2) {
@@ -15,32 +15,33 @@ function getMoveName(argMoveId) {
 }
 
 function displayResult(argPlayerMove, argComputerMove) {
-    printMessage('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
     if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
+        resultPlayer++;
         printMessage('Wygrywasz!');
     } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
+        resultPlayer++;
         printMessage('Wygrywasz!');
     } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
+        resultPlayer++;
         printMessage('Wygrywasz!');
     } else if (argPlayerMove == argComputerMove && true) {
         printMessage('Remis');
     } else {
+        resultComputer++;
         printMessage('Przegrywasz :(');
     }
     printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+    document.getElementById('result').innerHTML = resultPlayer + " - " + resultComputer;
+
 }
 
 function buttonClicked(buttonName) {
     clearMessages();
-    printMessage(buttonName + " został kliknięty");
     playerMove = buttonName;
-    printMessage('wybór ruchu gracza to: ' + playerInput);
-    printMessage('ruch gracza to: ' + playerMove);
+    printMessage('Ruch gracza to: ' + playerMove);
     randomNumber = Math.floor(Math.random() * 3 + 1);
-    printMessage('wylosowana liczba to: ' + randomNumber);
     computerMove = getMoveName(randomNumber);
-    printMessage('ruch komputera to: ' + computerMove);
-    printMessage("lecim");
+    printMessage('Ruch komputera to: ' + computerMove);
     displayResult(playerMove, computerMove);
 }
 
